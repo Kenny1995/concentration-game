@@ -1,6 +1,6 @@
 /*
  * Create a list that holds all of your cards
-*/
+ */
 let cardIcons = [
   "diamond",
   "paper-plane-o",
@@ -51,7 +51,7 @@ createCard();
 // Click Event on each card
 function onClick(card) {
   //Click Event on card
-  card.addEventListener("click", function() {
+  card.addEventListener("click", function () {
     const cardA = this;
     const cardB = openedCards[0];
     //When there is an existing card opened
@@ -69,20 +69,21 @@ function onClick(card) {
   });
 }
 
+
 function gameOver() {
   if (matchedCards.length === cardIcons.length) {
-    alert("Game Over!!!");
+    alert("Congratulations YOU WON!!!")
   }
 }
 
-function generateGameboard() {}
+// function generateGameboard() {}
 
 // Compare card function
 function compareCards(cardA, cardB) {
   // we are to compare our opened cards
   if (cardA.innerHTML === cardB.innerHTML) {
-    cardA.classList.add("match");
-    cardB.classList.add("match");
+    cardA.classList.add("match", "animated", "bounce");
+    cardB.classList.add("match", "animated", "bounce");
 
     //matched Cards
     matchedCards.push(cardA, cardB);
@@ -92,9 +93,13 @@ function compareCards(cardA, cardB) {
     gameOver();
   } else {
     //Timer delay to before closing cards
-    setTimeout(function() {
-      cardA.classList.remove("open", "show", "disabled");
-      cardB.classList.remove("open", "show", "disabled");
+
+    cardA.classList.add("shake");
+    cardB.classList.add("shake");
+
+    setTimeout(function () {
+      cardA.classList.remove("open", "show", "disabled", "shake");
+      cardB.classList.remove("open", "show", "disabled", "shake");
 
     }, 400);
 
@@ -109,6 +114,7 @@ function compareCards(cardA, cardB) {
 const getMoves = document.querySelector(".moves");
 getMoves.innerHTML = 0;
 let countMoves = 0;
+
 function moves() {
   countMoves++;
   getMoves.innerHTML = countMoves;
@@ -137,37 +143,21 @@ function restart() {
 }
 
 const starsRating = document.querySelector('.stars')
+
 function rating() {
-    switch(countMoves) {
-        case 20:
-            starsRating.innerHTML = `<li><i class="fa fa-star"></i></li><li><i class="fa fa-star"></i></li>`;
-        break;
+  switch (countMoves) {
+    case 20:
+      starsRating.innerHTML = `<li><i class="fa fa-star"></i></li><li><i class="fa fa-star"></i></li>`;
+      break;
 
-        case 25:
-        starsRating.innerHTML = `<li><i class="fa fa-star"></i></li>`;
-        break;
+    case 25:
+      starsRating.innerHTML = `<li><i class="fa fa-star"></i></li>`;
+      break;
 
 
-    }
   }
+}
 // This checks on two clicked cards
-function activateCards() {
-  // add event listener
-  document.querySelectorAll("li.card").forEach(function(card) {
-    card.addEventListener("click", function() {
-      if (lastFlipped) {
-        console.log(lastFlipped, card);
-        lastFlipped = card;
-      } else {
-        lastFlipped = card;
-      }
-    });
-  });
-}
-
-function deactivateCards() {
-  // remove event listener
-}
 
 //store cards that are open
 

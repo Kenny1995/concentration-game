@@ -2,19 +2,17 @@
 
 ## Table of Contents
 
-* [Instructions](#instructions)
+* [HOW TO PLAY](#Playing)
 * [Contributing](#contributing)
 
-## Instructions
+## Playing
 
-The starter project has some HTML and CSS styling to display a static version of the Memory Game project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
+The concentartion game is all about getting two cards that match each other based on the symbol or image under the card.
+The card can be played by more than one player as each player takes turn to match each of the card.
 
-To get started, open `js/app.js` and start building out the app's functionality
-
-For specific, detailed instructions, look at the project instructions in the [Udacity Classroom](https://classroom.udacity.com/me).
+HOW TO PLAY THE GAME
+The game is played by clicking on two cards which inturn flips over to show the symbols/images on it, if the two clicked match each other then the card remains opened. This takes effect till all the 16 cards are opened.
 
 ## Contributing
 
-This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
-
-For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
+This was designed by me Aladi Kenneth, to play the game click [here](https://kenny1995.github.io/concentration-game/)
