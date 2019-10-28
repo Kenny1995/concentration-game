@@ -15,4 +15,4 @@ The game is played by clicking on two cards which inturn flips over to show the 
 
 ## Contributing
 
-This was designed by me Aladi Kenneth, to play the game click [here](https://kenny1995.github.io/concentration-game/)
+This was designed by me Aladi Kenneth, to play the game click [here](https://kendevops.github.io/concentration-game/)
